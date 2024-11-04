@@ -1,0 +1,183 @@
+body {
+    margin: 0 !important;
+}
+
+.card {
+    border: 1px solid #007bff;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: white;
+}
+
+.navbar-nav {
+    flex-grow: 1;
+    justify-content: flex-start;
+}
+
+form.d-flex {
+    justify-content: flex-end;
+}
+.container {
+    background-image: url('../Images/banner2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width:1700px;
+}
+.navbar {
+    background-color: brown;
+}
+.img {
+    height: 50px;
+}
+.h1 {
+    color: white;
+    font-family: math;
+    font-weight: bold;
+    font-size: x-large;
+}
+.search {
+    background-color: black;
+    color: white;
+}
+.header {
+    color: #910000; 
+    font-family: serif; 
+    font-weight: bold; 
+    font-size: 50px;
+}
+.header2 {
+    color: black;
+    font-size: 20px;
+}
+.centered-content {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+.ml {
+    color: #4a0000;
+    font-size: 70px;
+}
+@media (max-width: 932px) {
+    h1 {
+        margin-left: 10px; 
+        font-size: 50px; 
+    }
+
+    .ml {
+        margin-left: 0px;
+    }
+}
+
+ropdown-container {
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 15px;
+}
+
+.dropbtn {
+    background-color: #3d4c56;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 4px;
+    font-family: math;
+    font-weight: bold;
+}
+
+/* Dropdown content styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 400px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #a52a2a;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+    margin-left: 200px;
+}
+
+    .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-family: 'FangSong', serif; /* Use the specified font */
+    }
+
+        .dropdown-content a:hover {
+            background-color: #575757; /* Optional: Highlight color on hover */
+        }
+
+.show {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .dropdown-container .col-md-4 {
+        max-width: 100%;
+    }
+
+    .dropbtn {
+        width: 100%;
+    }
+}
+.dropdown-container {
+    margin-left: 80px;
+}
+
+.table {
+    --bs-table-bg: #645656;
+    max-width: 1200px;
+    margin-left: 200px;
+}
+
+    .table thead {
+        --bs-table-bg: #910000; /* Header background color */
+        color: white; /* Text color for the header */
+    }
+
+    .table th, .table td {
+        padding: 15px;
+        text-align: left;
+        color: white;
+    }
+
+    .table th {
+        font-weight: bold;
+    }
+
+    .table tbody tr {
+        transition: background-color 0.2s ease-in-out;
+    }
+
+        .table tbody tr:hover {
+            --bs-table-active-color: : transparent; /* Slight hover effect */
+        }
+
+    .table a {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+
+        .table a:hover {
+            text-decoration: underline;
+        }
+.mt {
+     margin-top: 50px;
+}

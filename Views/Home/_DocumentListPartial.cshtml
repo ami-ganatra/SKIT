@@ -1,0 +1,29 @@
+﻿@using SKIT.Data.Dtos;
+@model IEnumerable<DocumentDto>
+<link href="~/css/site.css" />
+<table class="table table-striped custom-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>URL</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var document in Model)
+            {
+                <tr>
+                    <td>@document.Name</td>
+                    <td><a href="@document.Url" target="_blank">@document.Url</a></td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="2">No documents found.</td>
+            </tr>
+        }
+    </tbody>
+</table>

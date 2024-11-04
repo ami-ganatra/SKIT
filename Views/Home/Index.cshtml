@@ -1,0 +1,111 @@
+﻿@using SKIT.ViewModel
+@model ComputerViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<link href="~/css/site.css"/>
+<div class="row">
+    <div class="col-12">
+        <h1 class="text-center header">
+            Swami Krishnajivandas Institute Of Technology
+        </h1>
+        <p class="text-center header2">
+            Welcome to the SKIT Computer Department website. Please select your semester to find the relevant information.
+        </p>
+    </div>
+</div>
+
+<h1 class="text-center ml">Computer Department Courses</h1>
+<div class="col-12 mt">
+    <div class="dropdown-container">
+         @if (Model.Semesters != null && Model.Semesters.Any())
+        {
+            <div class="row">
+                @foreach (var semester in Model.Semesters)
+                {
+                    <div class="col-md-4 mb-3">
+                        <div class="dropdown">
+                            <button onclick="toggleDropdown('dropdown_@semester.Id')" class="dropbtn">
+                                @semester.Name
+                            </button>
+                            <div id="dropdown_@semester.Id" class="dropdown-content">
+                                @if (Model.Subjects != null)
+                                {
+                                    @foreach (var subject in Model.Subjects.Where(s => s.SemesterId == semester.Id))
+                                    {
+                                        <a href="javascript:void(0);" onclick="fetchDocuments(@subject.SubId)">@subject.Name</a>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <p>No semesters available.</p>
+        }
+    </div>
+</div>
+<div id="document-content" class="mt-4"></div>
+
+<div class="centered-content">
+    <header class="entry-header">
+        <h1 class="entry-title">Home</h1>
+    </header>
+    <div class="entry-content">
+        <p><strong>Vision</strong></p>
+        <p align="justify">
+            We offer an exceptional learning and teaching environment that fosters innovation. We aim to equip students with cutting-edge knowledge and skills in computer technology, producing employable graduates and entrepreneurs with a competitive edge. We are committed to extending educational opportunities to institutions, industries, and government, enhancing the quality of life through computer technology.
+        </p>
+        <p align="justify">
+            Our vision is to be a premier computer engineering department that delivers quality technical education imbued with expertise and ethical values. We strive to provide our students with opportunities and resources to grow into creative, dynamic, and globally competent computer technology professionals.
+        </p>
+        <p><strong>Introduction</strong></p>
+        <ul>
+            <li>We are committed to providing top-notch computer education facilities for students aspiring to become engineering professionals.</li>
+            <li>Our department boasts a team of qualified faculty members and dedicated technical staff.</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+       function toggleDropdown(id) {
+        var dropdowns = document.querySelectorAll('.dropdown-content');
+        dropdowns.forEach(function(dropdown) {
+            if (dropdown.id !== id) {
+                dropdown.style.display = 'none';
+            }
+        });
+
+        var dropdownContent = document.getElementById(id);
+        if (dropdownContent.style.display === 'block') {
+            dropdownContent.style.display = 'none';
+        } else {
+            dropdownContent.style.display = 'block';
+        }
+    }
+        function fetchDocuments(subjectId) {
+            fetch(`/Home/GetDocuments?id=${subjectId}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text(); // Return the HTML content
+            })
+            .then(data => {
+                document.getElementById('document-content').innerHTML = data;
+                var dropdowns = document.querySelectorAll('.dropdown-content');
+                dropdowns.forEach(function (dropdown) {
+                    dropdown.style.display = 'none';
+                });
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+        }
+</script>
