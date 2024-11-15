@@ -1,0 +1,24 @@
+﻿<script src="~/js/validation.js"></script>
+<div class="popup-header">
+    <h3 style="
+    margin-left: 100px;
+    font-family: emoji;
+    color: #910000;
+    font-weight: bold;
+">
+        Login
+    </h3>
+</div>
+<form id="loginForm">
+    <div class="mb-3">
+        <label for="loginEmail" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="loginEmail" name="email">
+        <span class="red" id="loginemailError"></span>
+    </div>
+    <div class="mb-3">
+        <label for="loginPassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="loginPassword" name="password">
+        <span class="red" id="passwordError"></span>
+    </div>
+    <button type="submit" class="btn btn-login w-100 mb-3" id="loginSubmit">Login</button>
+</form>

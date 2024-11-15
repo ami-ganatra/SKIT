@@ -138,3 +138,4 @@ D:\SKIT\bin\Debug\net8.0\SKIT.Data.dll
 D:\SKIT\bin\Debug\net8.0\SKIT.Data.pdb
 D:\SKIT\bin\Debug\net8.0\Microsoft.OpenApi.dll
 D:\SKIT\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\SKIT\obj\Debug\net8.0\SKIT.sourcelink.json

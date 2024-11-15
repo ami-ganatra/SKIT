@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SKIT.Data.Dtos;
 using SKIT.Models;
 using SKIT.services;
 using SKIT.ViewModel;
@@ -43,6 +44,36 @@ namespace SKIT.Controllers
         {
             return View();
         }
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Register(StudentsDto student)
+        {
+            bool result = await _compapiservice.Register(student);
+            if (result)
+            {
+                // Registration successful
+                TempData["RegistrationMessage"] = "Registration successful! Click on Login";
+            }
+            else
+            {
+                // Student with the same email or enrollment number already exists
+                TempData["RegistrationMessage"] = "A student with this enrollment number already exists.";
+            }
+
+            return RedirectToAction("Index");
+        }
+
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

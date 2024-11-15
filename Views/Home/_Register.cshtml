@@ -1,0 +1,70 @@
+﻿<script src="~/js/validation.js"></script>
+<style>
+    .red {
+        color: red !important;
+        font-size: 0.9em;
+        display: block; /* Ensures it appears on a new line */
+        margin-top: 4px;
+    }
+</style>
+<div class="popup-header">
+    <h3 style="
+    text-align: center;
+    font-family: emoji;
+    color: #910000;
+    font-weight: bold;
+    ">
+        Register
+    </h3>
+</div>
+
+<form id="registerForm" method="post" action="@Url.Action("Register", "Home")" style="max-width: 1200px;">
+    <div class="row">
+        <input type="hidden" name="Id" />
+        <div class="col-md-6 mb-3">
+            <label for="registerName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="registerName" name="Name">
+            <span class="red" id="nameError"></span>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="registerEnrollment" class="form-label">Enrollment Number</label>
+            <input type="text" class="form-control" id="registerEnrollment" name="EnrollmentNo">
+            <span class="red" id="enrollmentError"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="registerEmail" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="registerEmail" name="Email">
+            <span class="red" id="emailError"></span>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="registerMobile" class="form-label">Mobile Number</label>
+            <input type="tel" class="form-control" id="registerMobile" name="Mobile_No">
+            <span class="red" id="mobileError"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="registerGuardianMobile" class="form-label">Guardian/Parent Mobile</label>
+            <input type="tel" class="form-control" id="registerGuardianMobile" name="Parent_Mobile_No">
+            <span class="red" id="parentMobileError"></span>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="registerPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="registerPassword" name="Password" >
+            <span class="red" id="passError"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="registerAddress" class="form-label" >Address</label>
+            <textarea class="form-control" id="registerAddress" name="Address" rows="1"></textarea>
+            <span class="red" id="addError"></span>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <button type="submit" class="btn btn-register w-100 mb-3" id="registerSubmit" style="margin-left: 120px;">Register</button>
+    </div>
+</form>

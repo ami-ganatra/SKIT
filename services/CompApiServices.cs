@@ -55,5 +55,26 @@ namespace SKIT.services
             var document = await response.Content.ReadFromJsonAsync<IEnumerable<DocumentDto>>(options);
             return document;
         }
+
+        public async Task<bool> Register(StudentsDto student)
+        {
+            string url = ApiConstant.BaseUrl + ApiConstant.RegisterUrl;
+            HttpResponseMessage response = await _httpClient.PostAsJsonAsync(url, student);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return true;
+            }
+            else if (response.StatusCode == System.Net.HttpStatusCode.Conflict)
+            {
+                // Conflict status returned, meaning student already exists
+                return false;
+            }
+
+            response.EnsureSuccessStatusCode();
+            return false;
+        }
+
+
     }
 }

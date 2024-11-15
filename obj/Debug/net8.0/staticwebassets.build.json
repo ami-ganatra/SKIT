@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pjfl50Xvn/kWvBPuzBYORY+Eaiz9rRLKs6KvoEjJZpo=",
+  "Hash": "iCqFPchlUfgpBx/iXPjYuq7flMT2x5JXTBE5wxAybZk=",
   "Source": "SKIT",
   "BasePath": "_content/SKIT",
   "Mode": "Default",
@@ -148,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "D:\\SKIT\\wwwroot\\js\\validation.js",
+      "SourceId": "SKIT",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\SKIT\\wwwroot\\",
+      "BasePath": "_content/SKIT",
+      "RelativePath": "js/validation.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\validation.js"
     },
     {
       "Identity": "D:\\SKIT\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

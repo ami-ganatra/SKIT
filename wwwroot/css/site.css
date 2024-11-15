@@ -181,3 +181,167 @@ ropdown-container {
 .mt {
      margin-top: 50px;
 }
+
+/* Login/Register Pop-up Modal Style */
+.login-container {
+    max-width: 400px !important;
+    margin: 50px auto !important;
+    padding: 30px !important;
+    background-color: rgba(145, 0, 0, 0.95) !important; /* Dark red with opacity */
+    color: white !important;
+    border-radius: 8px !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3) !important;
+    position: relative !important;
+    z-index: 1050 !important;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+}
+
+/* Modal Container */
+.custom-modal-dialog {
+    max-width: 400px;
+    width: 100%;
+}
+
+.custom-modal-content {
+    background-color: rgba(145, 0, 0, 0.95); /* Dark red with opacity */
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Header */
+.custom-modal-header {
+    background-color: #910000; /* Header color */
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+}
+
+.custom-modal-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+/* Modal Body */
+.custom-modal-body {
+    padding: 20px;
+}
+
+/* Form Controls */
+.custom-form-control {
+    background-color: #ffffff;
+    color: #910000;
+    border: 1px solid #910000;
+    border-radius: 5px;
+    padding: 8px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+    .custom-form-control::placeholder {
+        color: #645656;
+        opacity: 0.8;
+    }
+
+/* Login Button */
+.custom-login-btn { /* General button styling */
+    .custom-btn
+
+{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.custom-btn.primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.custom-btn.secondary {
+    background-color: #2ecc71;
+    color: white;
+}
+
+/* Popup container styling */
+.custom-popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.popup-content {
+    background: white;
+    margin: 15% auto;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-radius: 8px;
+}
+
+/* Close button styling */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Form styling */
+.popup-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.popup-content .form-group {
+    margin-bottom: 15px;
+}
+
+.popup-content label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.popup-content input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+

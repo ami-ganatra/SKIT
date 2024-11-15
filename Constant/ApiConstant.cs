@@ -6,5 +6,6 @@
         public const string GetSubject = "api/Comp/GetSubjectBySem/"; 
         public const string GetSem = "api/Comp/GetSemester/";
         public const string GetDoc = "api/Comp/GetDocument?id=";
+        public const string RegisterUrl = "api/Auth/register";
     }
 }
