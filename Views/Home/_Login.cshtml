@@ -9,15 +9,15 @@
         Login
     </h3>
 </div>
-<form id="loginForm">
+<form id="loginForm" method="post" action="@Url.Action("Login", "Home")">
     <div class="mb-3">
         <label for="loginEmail" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="loginEmail" name="email">
+        <input type="email" class="form-control" id="loginEmail" name="Email">
         <span class="red" id="loginemailError"></span>
     </div>
     <div class="mb-3">
         <label for="loginPassword" class="form-label">Password</label>
-        <input type="password" class="form-control" id="loginPassword" name="password">
+        <input type="password" class="form-control" id="loginPassword" name="Password">
         <span class="red" id="passwordError"></span>
     </div>
     <button type="submit" class="btn btn-login w-100 mb-3" id="loginSubmit">Login</button>

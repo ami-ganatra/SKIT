@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SKIT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1aee719ae9048b6c896870eee4e1605710160222")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65cddc8c786052759f324085e044a8a4a4c271c1")]
 [assembly: System.Reflection.AssemblyProductAttribute("SKIT")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SKIT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

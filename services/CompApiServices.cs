@@ -1,4 +1,5 @@
 ﻿using SKIT.Constant;
+using SKIT.Data.Data;
 using SKIT.Data.Dtos;
 using System.Net.Http;
 using System.Text.Json;
@@ -75,6 +76,22 @@ namespace SKIT.services
             return false;
         }
 
+        public async Task<bool> LoginAsync(LoginDto login)
+        {
+            string url = ApiConstant.BaseUrl + ApiConstant.LoginUrl;
+            HttpResponseMessage response = await _httpClient.PostAsJsonAsync(url, login);
 
+            if (response.IsSuccessStatusCode)
+            {
+                return true;
+            }
+            else if (response.StatusCode == System.Net.HttpStatusCode.Conflict)
+            {
+                return false;
+            }
+
+            response.EnsureSuccessStatusCode();
+            return false;
+        }
     }
 }
