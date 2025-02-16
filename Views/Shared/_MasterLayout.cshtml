@@ -80,7 +80,9 @@
     <div id="popupMessageText" style="color: #51a500;background-color: #cae1ca;text-align: center;font-size: 22px;width: 500px;margin-left: 600px;">
         @if (TempData["RegistrationMessage"] != null)
         {
-            @Html.Raw(TempData["RegistrationMessage"])
+            <div id="popupMessageText" class="alert alert-success alert-dismissible fade show mx-auto text-center" role="alert" style="max-width: 500px; font-size: 18px;">
+                @Html.Raw(TempData["RegistrationMessage"])
+            </div>
         }
     </div>
     <!-- Content Section -->
